@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Learn With Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 id="title"> Learn Coding For Free </h1>
+  <p id="description"> Thank you for taking the time to join us! </p>
+  <form id="survey-form">
+   <fieldset> 
+    <label for="name" id="name-label"> Name:
+    <input id="name" type="text" placeholder="Enter your name" required></label>
+    <label for="email" id="email-label""> Email: 
+    <input id="email" type="email" placeholder="Enter your Email" required></label>
+    <label for="number" id="number-label"> Age: 
+    <input id="number" type="number" placeholder="Age" min="10" max="99"></label>
+  </fieldset>
+  <fieldset>
+    <label for="dropdown"> Which option best describes your current role? 
+      <br>
+    <select id="dropdown" name="dropdown">
+      <option disabled selected value="">Select current role</option>
+      <option value="option1">Student</option>
+    <option value="option2">Full time job</option>
+    <option value="option3">prefer not to say</option>
+    </select> </label>
+  </fieldset>
+  <fieldset class="inline">
+    <p> Did you try coding before ? </p>
+    <label><input type="radio" name="choice" value="definitely">
+    Definitely</label>
+    <br>
+    <label><input type="radio" name="choice" value="a-little">
+    A little</label>
+    <br>
+    <label><input type="radio" name="choice" value="never">
+    Never</label>
+  </fieldset>
+  <fieldset>
+    <p>What's your hobby?</p>
+    <label for="hobby1"><input type="checkbox" name="hobby" value="coding" id="hobby1">
+    coding</label>
+    <br>
+    <label for="hobby2"><input type="checkbox" name="hobby" value="singing" id="hobby2">
+    singing</label>
+    <br>
+    <label for="hobby3"><input type="checkbox" name="hobby" value="drawing" id="hobby3">
+    drawing</label>
+    <br>
+    <label for="hobby4"><input type="checkbox" name="hobby" value="sports" id="hobby4">
+    sports</label>
+    <br>
+    <label for="hobby5"><input type="checkbox" name="hobby" value="drawing" id="hobby5">
+    drawing</label>
+  </fieldset>
+  <fieldset>
+   <label for="Comment">Any Comments? :</label>
+   <br>
+   <textarea name="Comment" id="Comment" cols="40" rows="8" placeholder="Type your Comment"></textarea>
+  </fieldset>
+   <br>
+   <button type="submit" id="submit"> Submit </button>
+  </form>
+</body>
+</html>
