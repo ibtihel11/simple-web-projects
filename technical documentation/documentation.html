@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Web Design Principles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <header>Responsive Web Design Principles Documentation</header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Viewport_and_Media_Queries" class="nav-link">Viewport and Media Queries</a>
+    <a href="#Flexible_Layouts" class="nav-link">Flexible Layouts</a>
+    <a href="#Responsive_Images" class="nav-link">Responsive Images</a>
+    <a href="#Mobile-First_Design" class="nav-link">Mobile-First Design</a>
+    <a href="#Tools_and_Techniques" class="nav-link">Tools and Techniques</a>
+    <a href="#Resources" class="nav-link">Resources</a>
+  </nav>
+
+  <main id="main-doc">
+    <section id="Introduction" class="main-section">
+      <header>Introduction</header>
+      <p>Responsive Web Design is a crucial technique in modern web development that ensures websites can adapt and display properly across a wide range of devices, including desktops, tablets, and smartphones. As internet access through mobile devices continues to rise, it has become more important than ever for websites to provide a seamless, functional, and visually appealing experience regardless of screen size.
+      </p>
+      <p>By using responsive techniques, developers can build a single website that dynamically adjusts its layout and elements to fit different viewing environments, eliminating the need for multiple versions of the same site.</p>
+    </section>
+
+    <section id="Viewport_and_Media_Queries" class="main-section">
+      <header>Viewport and Media Queries</header>
+      <p>The viewport is the visible area of a web page on a screen. It can vary widely depending on the device used to view a website. To control how your site scales and behaves on different devices, you use the meta viewport tag in your HTML. This tells the browser how to adjust the page’s dimensions and scaling. Alongside this, media queries are a powerful CSS feature that allows developers to apply specific styles depending on the characteristics of a device, such as its screen width, height, or orientation. This enables the creation of tailored designs for different devices, providing an optimal user experience.</p>
+      <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>
+      <p>Example media query:</p>
+      <code>
+      @media (max-width: 600px) {<br>
+        body { background-color: lightgray; }<br>
+      }
+      </code>
+    </section>
+
+    <section id="Flexible_Layouts" class="main-section">
+      <header>Flexible Layouts</header>
+      <p>Flexible layouts use relative units instead of fixed units like pixels, allowing a web page’s layout to resize fluidly as the viewport changes. Units like percentages, viewport width (vw), viewport height (vh), and relative font units like em and rem make it easier to create designs that stretch and shrink based on the available screen space. This technique is essential in responsive design as it helps prevent horizontal scrolling and ensures that elements retain appropriate spacing and proportions on any screen size.</p>
+      <code>.container { width: 80%; padding: 2rem; }</code>
+    </section>
+
+    <section id="Responsive_Images" class="main-section">
+      <header>Responsive Images</header>
+      <p>Images can significantly affect the responsiveness of a web page. Large or fixed-size images may overflow smaller screens, breaking the layout. To avoid this, developers use techniques such as setting the image's maximum width to 100% of its container and adjusting the height automatically to maintain its aspect ratio. For even better control, HTML elements like the &lt;picture&gt; tag or the srcset attribute can be used to load different image files based on the user's device, screen resolution, or bandwidth, ensuring that the image is always appropriately sized and optimized for the device displaying it.</p>
+      <code>img { max-width: 100%; height: auto; }</code>
+    </section>
+
+    <section id="Mobile-First_Design" class="main-section">
+      <header>Mobile-First Design</header>
+      <p>Mobile-first design is an approach that involves designing and coding a website starting with the smallest screen sizes in mind and then progressively enhancing the layout for larger screens using media queries. This strategy has become increasingly important as mobile device usage surpasses desktop browsing worldwide. 
+      </p>
+      <p>By prioritizing mobile usability and performance, developers can ensure that essential content is accessible and readable on smartphones, with additional features and layout improvements added as screen space allows. This results in a better, more inclusive experience for all users.</p>
+    </section>
+
+    <section id="Tools_and_Techniques" class="main-section">
+      <header>Tools and Techniques</header>
+      <p>To build responsive websites efficiently, developers rely on various tools and techniques. Flexbox and CSS Grid Layout are two modern CSS layout systems that make it easier to design flexible and complex layouts without the need for floats or positioning hacks. CSS frameworks like Bootstrap and Tailwind CSS provide pre-built responsive components and utility classes, helping speed up development time. Browser developer tools are also indispensable for testing and debugging responsive layouts, allowing developers to simulate different devices and viewports to ensure their designs look and function properly everywhere.</p>
+      <ul>
+        <li>
+          <strong>Flexbox</strong>  
+          <p>A layout system for distributing space within a container. Example:</p>
+          <code>
+            .container { display: flex; justify-content: space-between; }
+          </code>
+        </li>
+
+        <li>
+          <strong>CSS Grid</strong>  
+          <p>A powerful 2D layout system for creating grid-based designs:</p>
+          <code>
+            .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+          </code>
+        </li>
+
+        <li>
+          <strong>Bootstrap / Tailwind CSS</strong>  
+          <p>Popular CSS frameworks for building responsive layouts quickly:</p>
+          <code>
+            &lt;div class="container mx-auto p-4"&gt;Content&lt;/div&gt;
+          </code>
+        </li>
+
+        <li>
+          <strong>Media Queries</strong>  
+          <p>Allow you to apply CSS rules conditionally based on screen size and other factors:</p>
+          <code>
+            @media (max-width: 768px) {<br>
+              body { font-size: 14px; }<br>
+            }
+          </code>
+        </li>
+
+        <li>
+          <strong>Chrome DevTools Responsive Mode</strong>  
+          <p>Inspect and simulate different screen sizes in your browser.  
+          Shortcut: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> (Windows)  
+          or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd> (Mac)</p>
+        </li>
+      </ul>
+
+    </section>
+
+    <section id="Resources" class="main-section">
+      <header>Resources</header>
+      <p>Learning about responsive web design involves continuous exploration. Here are some valuable resources to deepen your knowledge and stay current with best practices:</p>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank">MDN: Responsive Design</a></li>
+        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks: Flexbox Guide</a></li>
+        <li><a href="https://www.freecodecamp.org/learn" target="_blank">FreeCodeCamp Responsive Web Design</a></li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
